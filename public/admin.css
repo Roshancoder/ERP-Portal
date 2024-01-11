@@ -1,0 +1,59 @@
+.full{
+    padding:4%;
+}
+.logo{
+    margin-bottom: -2%;
+}
+
+.head{
+    background-color: rgb(255, 255, 255);
+    padding-top: 0.5%;
+    padding-bottom:0.01%;
+    margin-left: 36%;
+    margin-right: 36%;
+    color: rgb(0, 0, 0);
+    border-top-right-radius: 4%;
+    border-top-left-radius: 4%;
+}
+
+.form{
+    background-color: rgb(255, 255, 255);
+    padding-top: 2%;
+    padding-bottom: 3%;
+    margin-left: 36%;
+    margin-right: 36%;
+    border-bottom-left-radius: 4%;
+    border-bottom-right-radius: 4%;
+}
+
+.email{
+    width: 65%;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.pass{
+    width: 65%;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.Login{
+    padding: 2% 6.4%;
+    color: aliceblue;
+    background-color: black;
+    font-size: 89%;
+    border-radius: 6%;
+    transition-duration: 0.2s;
+    box-shadow: 0 1% #959595;
+}
+
+.Login:hover{
+    padding: 2.3% 6.9%;
+    background: linear-gradient(to bottom, #720000 0%,#490000 50%,#720000 100%);
+    cursor: pointer;
+}
+.Login:active{
+    box-shadow: 0 0 #737373 ;
+    transform: translateY(5%);
+}

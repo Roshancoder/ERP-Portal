@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title><%= locals.title ? title : "ERP Portal" %></title>
+    <link rel="icon" href="/assets/ymca.jpg"  type = "image/x-icon">
+</head>
+<body style="background: linear-gradient(to bottom, #720000 0%,#490000 50%,#720000 100%);">
+    <div class="full">
+    <center>
+    <div class = "head">
+    <img src="/assets/ymca.jpg" alt="logo" width="150px" height="150px" class="logo">
+    <h2 align = "center">Student Login Portal</h2>
+    <p id = "demo">Enter your credentials:</p>
+    </div>
+    <div class = "form">
+    <form action="/route/login" method = "POST">
+        <i class="fa fa-envelope"></i>
+        <input type="email" name="Email" id="1" align = "middle" placeholder="Email" class = "email" required>
+        <br><br>
+        <i class = "fa fa-key"></i>
+        <input type="password" name="pass" id="2" placeholder="Password" class = "pass" required>
+        <br><br>
+        <a href="/route/forgetpassword" style="text-decoration: none; color: rgb(0, 0, 0);">Forgot your password?</a>
+        <br><br>
+        <a href="/route/adminLogin" style = "text-decoration: none; color:rgb(0, 0, 0);" >Login as Admin</a>
+        <br><br>
+        <button type="submit" class="Login">Log In</button>
+    </form>
+    </div>
+    </center>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <title><%= locals.title ? title : "ERP Portal" %></title>
+    <link rel="icon" href="/assets/ymca.jpg"  type = "image/x-icon">
+    <script src="main.js">
+    </script>
+</head>
+<body>
+    <div class="full">
+    <center>
+    <div class = "head">
+    <img src="/assets/ymca.jpg" alt="logo" width="50%" height="50%" class="logo">
+    <h2 align = "center">Student Login Portal</h2>
+    <p id = "demo">Enter your credentials:</p>
+    </div>
+    <div class = "form">
+    <form action="/route/login" method = "POST">
+        <i class="fa fa-envelope"></i> 
+        <input type="email" name="Email" id="1" align = "middle" placeholder="Email" class = "email" required>
+        <br><br>
+        <i class = "fa fa-key"></i>
+        <input type="password" name="pass" id="2" placeholder="Password" class = "pass" required>
+        <br><br>
+        <a href="/route/forgetpassword" style="text-decoration: none; color: rgb(0, 0, 0);" target="_blank">Forgot your password?</a>
+        <br><br>
+        <a href="/route/adminLogin" style = "text-decoration: none; color:rgb(0, 0, 0);" target = "_blank" >Login as Admin</a>
+        <br><br>
+        <button type="submit" class="Login">Log In</button>
+    </form>
+    </div> 
+    </center>
+    </div>
+</body>
+</html>

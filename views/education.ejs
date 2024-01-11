@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/static/education.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="icon" href="/assets/ymca.jpg" type = "image/x-icon">
+    <title>Education</title>
+</head>
+
+<body>
+    <div class="horizon">
+        <div class="topnav">
+            <form action = "/route/search" method = "Post">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit" name = "searchbar" ><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="profile">
+            <a href="/route/home"><i class='fa fa-user-circle'></i></a>
+        </div>
+    </div>
+    <input type="checkbox" id="check" checked="checked">
+    <label for="check">
+        <i class="fa fa-bars" id="bar"></i>
+    </label>
+    <div class="top">
+        <header>My Information</header>
+        <div class="items">
+            <ul>
+                <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/home"><i class='fa fa-user'></i>Dashboard</a></li>
+                <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/attendence"><i class="fa fa-pencil-square"></i>Attendence</a></li>
+                <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/fees"><i class='fa fa-money'></i>Fees</a></li>
+                <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/result"><i class="fa fa-line-chart"></i>Result</a></li>
+                <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/education"><i class='fa fa-graduation-cap'></i>Education</a></li>
+                <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/home"><i class='fa fa-home'></i>Home</a></li>
+                <li style="font-family: sans-serif;"> <a href="/route/signout"><i class="fa fa-paper-plane"></i>Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="column-2a">
+        <center><h2 class = "education">Education</h2></center>
+        <table class="table-style">
+            <tr>
+                <td>YMCA University</td>
+                <td>2021-2024</td>
+            </tr>
+            <tr>
+                <td><%= ins %></td>
+                <td>2020</td>
+            </tr>
+            <tr>
+                <td><%= s3 %></td>
+                <td>2018-2019</td>
+            </tr>
+            <tr>
+                <td><%= s2 %></td>
+                <td>2015-2017</td>
+            </tr>
+            <tr>
+                <td><%= s1 %></td>
+                <td>2010-2014</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="column-2b">
+    <center><h2 class = "skills">Skills</h2></center>
+        <table class="table-style">
+            <tr>
+                <td>Social Media</td>
+                <td>⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td>Public Speaking</td>
+                <td>⭐⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td>Data Structure</td>
+                <td>⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td>C++</td>
+                <td>⭐⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td> HTML</td>
+                <td>⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td> CSS</td>
+                <td>⭐⭐⭐</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

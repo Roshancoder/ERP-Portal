@@ -1,0 +1,169 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/static/sttylesheet.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="icon" href="/assets/ymca.jpg" type = "image/x-icon">
+  <title>Dashboard</title>
+  <style>
+    table {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      border-radius: 4%;
+    }
+    
+    td, th {
+      border: 2px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+      border-radius: 4%;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+</head>
+
+<body>
+  <div class="horizon">
+    <div class="topnav">
+      <form action = "/route/search" method = "Post">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit" name = "searchbar" ><i class='fa-paper-plane'></i></button>
+      </form>
+    </div>
+    <div class="profile">
+      <a href="/route/home"><i class='fa-pencil-square'></i></a>
+    </div>
+  </div>
+  <input type="checkbox" id="check" checked = "checked">
+  <label for="check">
+    <i class="fa fa-bars" id="bar" style="border-radius: 4px;"></i>
+  </label>
+  <div class="top">
+    <header style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">My Information</header>
+    <div class="items">
+      <ul>
+        <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/home"><i class='fa fa-user'></i>Dashboard</a></li>
+        <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/attendence"><i class="fa fa-pencil-square"></i>Attendence</a></li>
+        <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/fees"><i class='fa fa-money'></i>Fees</a></li>
+        <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/result"><i class="fa fa-line-chart"></i>Result</a></li>
+        <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/education"><i class='fa fa-graduation-cap'></i>Education</a></li>
+        <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/home"><i class='fa fa-home'></i>Home</a></li>
+        <li onclick="preventBack()" style="font-family: sans-serif;"> <a href="/route/signout"><i class="fa fa-paper-plane"></i>Log Out</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="details">
+    <div class = "greet">
+      <img src = "/assets/<%= rollx %>.jpg" alt = "error" width = "80px" height = "80px" style="border:5px solid yellow">
+      <div class = "heading">
+      <center>
+      <h3 style = "font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: brown; text-align: center;">Hii,<%= locals.user ? user :"User"%></h3>
+      </center>
+      </div>
+    </div>
+    <div class = "table">
+    <table>
+      <tr>
+        <td>Name</td>
+        <td><%= name %></td>
+      </tr>
+      <tr>
+        <td>Roll No.</td>
+        <td><%= roll %></td>
+      </tr>
+      <tr>
+        <td>Branch</td>
+        <td><%= branch %></td>
+      </tr>
+      <tr>
+        <td>Department</td>
+        <td><%= dep %></td>
+      </tr>
+      <tr>
+        <td>Semester</td>
+        <td><%= sem %></td>
+      </tr>
+      <tr>
+        <td>email</td>
+        <td><%= email %></td>
+      </tr>
+      <tr>
+        <td>contact</td>
+        <td><%= contact %></td>
+      </tr>
+    </table>
+    </div>
+  </div>
+</body>
+<script type = "text/javascript">
+  function preventBack(){
+      window.history.forward();
+  };
+  setTimeout("preventBack()",0);
+  window.onunload = function(){null};
+</script>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/sttylesheet.css">
+    <link rel="icon" href="/assets/ymca.jpg" type = "image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="sidenav">
+            <div class="user">
+                <img src="/assets/<%= rollx %>.jpg" class="user-dp">
+                <div>
+                    <h2><%= name %></h2>
+                    <p><%= email %></p>
+                </div>
+                <img src="/assets/star.png" class="star">
+            </div>
+            <ul>
+                <a href="/route/home"><li><img src="/assets/icons8-computer-64.png" alt=""><p>Dashboard</p></li></a>
+                <a href="/route/result"><li><img src="/assets/icons8-result-64.png" alt=""><p>Result</p></li></a>
+                <a href="/route/fees"><li><img src="/assets/icons8-fees-64.png" alt=""><p>Fees</p></li></a>
+                <a href="/route/project"><li><img src="/assets/icons8-briefcase-64.png" alt=""><p>Projects</p></li></a>
+                <a href="/route/attendance"><li><img src="/assets/icons8-attendance-50.png" alt=""><p>Attendance</p></li></a>
+                <a href="/route/helpSupport"><li><img src="/assets/icons8-online-support-64.png"><p>Help & Support</p></li></a>
+            </ul>
+            <ul>
+                <a href="/route/signout"><li><img src="/assets/icons8-logout-50.png" alt=""><p>Logout</p></li></a>
+            </ul>
+        </div>
+        <div class="content">
+            <ul>
+                <img src="/assets/<%= rollx %>.jpg" alt="DP">
+                <li><h4>Name : </h4><p><%= name %></p></li>
+                <br><br>
+                <li><h4>Roll No. :</h4><p><%= roll %></p></li>
+                <br><br>
+                <li><h4>Branch :</h4><p><%= branch %></p></li>
+                <br><br>
+                <li><h4>Department :</h4><p><%= dep %></p></li>
+                <br><br>
+                <li><h4>Semester :</h4><p><%= sem %></p></li>
+                <br><br>
+                <li><h4>Email :</h4><p><%= email %></p></li>
+                <br><br>
+                <li><h4>Contact No. :</h4><p><%= contact %></p></li>
+              </ul>
+        </div>
+    </div>
+</body>
+</html>

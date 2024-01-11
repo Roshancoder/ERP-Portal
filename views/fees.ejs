@@ -1,0 +1,226 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/fees.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="icon" href="/assets/ymca.jpg" type = "image/x-icon">
+    <title>Fees</title>
+</head>
+
+<body>
+    <div class="horizon">
+        <div class="topnav">
+            <form action = "/route/search" method = "Post">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit" name = "searchbar" ><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="profile">
+            <a href="/route/home"><i class='fa fa-user-circle'></i></a>
+        </div>
+    </div>
+    <input type="checkbox" id="check" checked = "checked">
+    <label for="check">
+        <i class="fa fa-bars" id="bar"></i>
+    </label>
+    <div class="top">
+        <header>My Information</header>
+        <div class="items">
+            <ul>
+                <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/home"><i class='fa fa-user'></i>Dashboard</a></li>
+                <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/attendence"><i class="fa fa-pencil-square"></i>Attendence</a></li>
+                <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/fees"><i class='fa fa-money'></i>Fees</a></li>
+        <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/result"><i class="fa fa-line-chart"></i>Result</a></li>
+        <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/education"><i class='fa fa-graduation-cap'></i>Education</a></li>
+        <li style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a href="/route/home"><i class='fa fa-home'></i>Home</a></li>
+        <li style="font-family: sans-serif;"> <a href="/route/signout"><i class="fa fa-paper-plane"></i>Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="full">
+        <div class="fees">
+            <center>
+                <h2 style="color: whitesmoke;">STUDENT FEE DETAILS</h2>
+                <br>
+                <br>
+            </center>
+        </div>
+        <div class="details">
+            <center>
+                <form>
+                    <label style="color: whitesmoke; font-size: 18px;">Semester:</h5>&ensp;&ensp;&ensp;<select
+                            name="semester" class="semester" id="semesters">
+                            <option selected="selected" value="semester1" class="sem"> </option>
+                            <option value="semester 1" class="sem" id="sem">Semester 1</option>
+                            <option value="semester 2" class="sem" id="sem">Semester 2</option>
+                            <option value="semester 3" class="sem" id="sem">Semester 3</option>
+                            <option value="semester 4" class="sem" id="sem">Semester 4</option>
+                            <option value="semester 5" class="sem" id="sem">Semester 5</option>
+                            <option value="semester 6" class="sem" id="sem">Semester 6</option>
+                            <option value="semester 7" class="sem" id="sem">Semester 7</option>
+                            <option value="semester 8" class="sem" id="sem">Semester 8</option>
+                        </select>
+                        &ensp;&ensp;&ensp;&ensp;&nbsp;
+                        <label style="color: whitesmoke; font-size: 18px;">&nbsp;&nbsp;Father Name</label>
+                        &ensp;&nbsp;&nbsp;<input type="text" name="father name" id="11" required>
+                        <br>
+                        <br>
+                        <label style="color: whitesmoke; font-size: 18px;">Department:</h5>&ensp;<select name="Department"
+                                class="Department" id="departments">
+                                <option selected="selected" value="semester1" class="sem"> </option>
+                                <option value="Computer Science" class="dep">Computer Science</option>
+                                <option value="Electronics" class="dep">Electronics</option>
+                                <option value="Mechanical" class="dep">Mechanical</option>
+                                <option value="Civil" class="dep">Civil</option>
+                                <option value="Electrical" class="dep">Electrical</option>
+                            </select>
+                            <label style="color: whitesmoke; font-size: 18px;">&nbsp;&nbsp;Mother Name</label>
+                            &ensp;&nbsp;<input type="text" name="Mother name" id="13" required>
+                            <br>
+                            <br>
+                            <input type="button" value = "Generate" onclick="myfun()" class = "butto" />
+                </form>
+            </center>
+        </div>
+        <div class="js">
+            <center>
+                <p id="aab" style="color: whitesmoke; font-size : 20px;">Submit Your Credentials For Amount</p>
+            </center>
+        </div>
+    </div>
+    <hr size="5px" style="background-color:  rgb(47, 47, 77);">
+    <div class="payment">
+        <center>
+            <h2 style="color:whitesmoke;">Payment By QR</h2>
+            <img src="/assets/upi.jpeg">
+            <h3 style="color: skyblue;">!Collect your reciept from Academic Department!</h3>
+        </center>
+    </div>
+</body>
+<script>
+    function myfun() {
+        var x = document.getElementById("semesters").value;
+        if (x == "semester 1" || x == "semester 3" || x == "semester 5" || x == "semester 7") {
+            document.getElementById("aab").innerHTML = "Your Fess for " + x + " is 38000";
+        }
+        else if (x == "semester 2" || x == "semester 4" || x == "semester 6" || x == "semester 8") {
+            document.getElementById("aab").innerHTML = "Your Fess for " + x + " is 32000";
+        }
+    }
+    window.onload = myfun;
+</script>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fees</title>
+    <link rel="stylesheet" href="/static/sttylesheet.css">
+    <link rel="icon" href="logo.jpg" type = "image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="sidenav">
+            <div class="user">
+                <img src="/assets/<%= rollx %>.jpg" class="user-dp">
+                <div>
+                    <h2><%= name %></h2>
+                    <p><%= email %></p>
+                </div>
+                <img src="/assets/star.png" class="star">
+            </div>
+            <ul>
+                <a href="/route/home"><li><img src="/assets/icons8-computer-64.png" alt=""><p>Dashboard</p></li></a>
+                <a href="/route/result"><li><img src="/assets/icons8-result-64.png" alt=""><p>Result</p></li></a>
+                <a href="/route/fees"><li><img src="/assets/icons8-fees-64.png" alt=""><p>Fees</p></li></a>
+                <a href="/route/project"><li><img src="/assets/icons8-briefcase-64.png" alt=""><p>Projects</p></li></a>
+                <a href="/route/attendance"><li><img src="/assets/icons8-attendance-50.png" alt=""><p>Attendance</p></li></a>
+                <a href="/route/helpSupport"><li><img src="/assets/icons8-online-support-64.png"><p>Help & Support</p></li></a>
+            </ul>
+            <ul>
+                <a href="/route/signout"><li><img src="/assets/icons8-logout-50.png" alt=""><p>Logout</p></li></a>
+            </ul>
+        </div>
+        <div class="content">
+            <center> 
+              <div class="full">
+                <div class="fees">
+                    <center>
+                        <h2 class = "htop">STUDENT FEE DETAILS</h2>
+                        <br>
+                        <br>
+                    </center>
+                </div>
+                <div class="details">
+                        <form>
+                            &ensp;&ensp;&ensp;&ensp;&nbsp;
+                            <label>Semester:&ensp;&ensp;&ensp;</label>
+                              <select name="semester" class="semester" id="semesters" required>
+                                    <option selected="selected" value="" class="sem" disabled selected>Choose Semester</option>
+                                    <option value="semester 1" class="sem" id="">Semester 1</option>
+                                    <option value="semester 2" class="sem" id="">Semester 2</option>
+                                    <option value="semester 3" class="sem" id="">Semester 3</option>
+                                    <option value="semester 4" class="sem" id="">Semester 4</option>
+                                    <option value="semester 5" class="sem" id="">Semester 5</option>
+                                    <option value="semester 6" class="sem" id="">Semester 6</option>
+                                    <option value="semester 7" class="sem" id="">Semester 7</option>
+                                    <option value="semester 8" class="sem" id="">Semester 8</option>
+                                </select>
+                                <br><br>
+                                &ensp;&ensp;&ensp;&ensp;
+                                <label>Father's Name:</label>
+                                &ensp;<input type="text" name="father name" id="11" required>
+                                <br><br>
+                                &ensp;&ensp;&ensp;&ensp;
+                                <label >Department:&ensp;&nbsp;</label>
+                                  <select name="Department" class="Department" id="departments" required>
+                                        <option selected="selected" value="" class="sem" disabled selected>Choose Department</option>
+                                        <option value="Computer Science" class="dep">Computer Science</option>
+                                        <option value="Electronics" class="dep">Electronics</option>
+                                        <option value="Mechanical" class="dep">Mechanical</option>
+                                        <option value="Civil" class="dep">Civil</option>
+                                        <option value="Electrical" class="dep">Electrical</option>
+                                    </select>
+                                    <br><br>
+                                    &ensp;&ensp;&nbsp;&nbsp;
+                                    <label>&nbsp;&nbsp;Mother's Name:</label>
+                                    &ensp;&nbsp;<input type="text" name="Mother name" id="13" required>
+                                    <br><br>
+                                    <input type="button" value = "Generate" onclick="myfun()" class = "result_button"/>
+                                    <p id = "aab"></p>
+                        </form>
+                </div>
+            </div>
+            <br>
+            <hr size="5px" style="background-color:  rgb(0, 172, 37);">
+            <br>
+            <div class="payment">
+                    <h4>Pay by QR</h4>
+                    <br><br>
+                    <img class = "QR" src="/assets/QR.jpg">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function myfun() {
+        var x = document.getElementById("semesters").value;
+        if (x == "semester 1" || x == "semester 3" || x == "semester 5" || x == "semester 7") {
+            document.getElementById("aab").innerHTML = "Your Fess for " + x + " is 38000";
+        }
+        else if (x == "semester 2" || x == "semester 4" || x == "semester 6" || x == "semester 8") {
+            document.getElementById("aab").innerHTML = "Your Fess for " + x + " is 32000";
+        }
+    }
+    window.onload = myfun;
+</script>
+</html>

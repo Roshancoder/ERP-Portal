@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="/static/sttylesheet.css">
+    <link rel="icon" href="/assets/ymca.jpg" type = "image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="sidenav">
+            <div class="user">
+                <img src="/assets/<%= rollx %>.jpg" class="user-dp">
+                <div>
+                    <h2><%= name %></h2>
+                    <p><%= email %></p>
+                </div>
+                <img src="/assets/star.png" class="star">
+            </div>
+            <ul>
+                <a href="/route/home"><li><img src="/assets/icons8-computer-64.png" alt=""><p>Dashboard</p></li></a>
+                <a href="/route/result"><li><img src="/assets/icons8-result-64.png" alt=""><p>Result</p></li></a>
+                <a href="/route/fees"><li><img src="/assets/icons8-fees-64.png" alt=""><p>Fees</p></li></a>
+                <a href="/route/project"><li><img src="/assets/icons8-briefcase-64.png" alt=""><p>Projects</p></li></a>
+                <a href="/route/attendance"><li><img src="/assets/icons8-attendance-50.png" alt=""><p>Attendance</p></li></a>
+                <a href="/route/helpSupport"><li><img src="/assets/icons8-online-support-64.png"><p>Help & Support</p></li></a>
+            </ul>
+            <ul>
+                <a href="/route/signout"><li><img src="/assets/icons8-logout-50.png" alt=""><p>Logout</p></li></a>
+            </ul>
+        </div>
+        <div class="content">
+            <center> 
+                <img src="/assets/ymca.jpg" alt="logo" width="20%" height="20%" class="logo">
+                <br><br>
+                <h2>CONTACT US</h2><br>
+            </center>
+                <ul>
+                    <li><i class = "fa fa-phone"></i>&ensp;<h4>Call us @ <a href="tel:9210030620" style="color: black;">9999999999</a></h4></li><br><br>
+                    <a href="mailto:adminymca@jcboseust.ac.in" style="color: black;"><li><i class = "fa fa-envelope">&ensp;</i><h4>Mail us @ adminymca@jcboseust.ac.in</h4></li></a><br><br>
+                    <center><li><a href="https://jcboseust.ac.in/content/all_notices/general-notices" style="color: rgb(253, 76, 76)" target="_blank"><h4>Check Notice Board</h4></a></li></center>
+                </ul>
+                <br>
+        </div>
+    </div>
+</body>
+</html>

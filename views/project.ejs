@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="/static/sttylesheet.css">
+    <link rel="icon" href="/assets/ymca.jpg" type = "image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="sidenav">
+            <div class="user">
+              <img src="/assets/<%= rollx %>.jpg" class="user-dp">
+                <div>
+                    <h2><%= name %></h2>
+                    <p><%= email %></p>
+                </div>
+                <img src="/assets/star.png" class="star">
+            </div>
+            <ul>
+              <a href="/route/home"><li><img src="/assets/icons8-computer-64.png" alt=""><p>Dashboard</p></li></a>
+              <a href="/route/result"><li><img src="/assets/icons8-result-64.png" alt=""><p>Result</p></li></a>
+              <a href="/route/fees"><li><img src="/assets/icons8-fees-64.png" alt=""><p>Fees</p></li></a>
+              <a href="/route/project"><li><img src="/assets/icons8-briefcase-64.png" alt=""><p>Projects</p></li></a>
+              <a href="/route/attendance"><li><img src="/assets/icons8-attendance-50.png" alt=""><p>Attendance</p></li></a>
+              <a href="/route/helpSupport"><li><img src="/assets/icons8-online-support-64.png"><p>Help & Support</p></li></a>
+            </ul>
+            <ul>
+              <a href="/route/signout"><li><img src="/assets/icons8-logout-50.png" alt=""><p>Logout</p></li></a>
+            </ul>
+        </div>
+        <div class="content">
+          <center>
+            <h1>
+              Projects
+            </h1>
+            <hr>
+            <br><br>
+            <div class="middle">
+            <form action = "/route/pro2" method = "post">
+              <label>Roll No:</label>&ensp;
+              <input type="number" name = "rrr" placeholder="All the best!" required>
+              <br>
+            <br>
+              <label>Select Semester: &ensp;&ensp;&ensp;</label>
+           <select name="session1" class="session" required>
+            <option  value="" class="select2" disabled selected>---- </option>
+           <option  value="s1" class="select2">1</option>
+           <option  value="s2" class="select2">2</option>
+           <option  value="s3" class="select2">3</option>
+           <option  value="s4" class="select2">4</option>
+           <option  value="s5" class="select2">5</option>
+           <option  value="s6" class="select2">6</option>
+           <option  value="s7" class="select2">7</option>
+           <option  value="s8" class="select2">8</option>
+           </select>
+           <br>
+           <br>
+            <br>
+           <button class="result_button">Fetch Projects</button>
+          </form>
+        </center>
+        </div>
+    </div>
+</body>
+</html>
